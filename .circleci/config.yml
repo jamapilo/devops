@@ -13,7 +13,7 @@ jobs:
       - checkout
       - setup_remote_docker
 
-      -run: docker build -t trabajo  .
+      - run: docker build -t trabajo  .
 
       # run tests!
       -run: docker run trabajo npm test
