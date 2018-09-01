@@ -13,10 +13,10 @@ jobs:
       - checkout
       - setup_remote_docker
 
-      -run: docker build -t trabajo  .
+      - run: docker build -t trabajo  .
 
       # run tests!
-      -run: docker run trabajo npm test
+      - run: docker run trabajo npm test
       # specify the version you desire here
       - image: circleci/node:7.10
       
