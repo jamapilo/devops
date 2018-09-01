@@ -1,0 +1,10 @@
+machine:
+        services:
+          - docker
+ dependencies: 
+        override:
+                - docker build -t trabajo
+        test:
+        override:
+                - docker run trabajo npm test
+
