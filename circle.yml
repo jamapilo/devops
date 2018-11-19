@@ -1,4 +1,6 @@
 machine:
+        node:
+                version: 6.1.0
         services:
           - docker
  dependencies: 
@@ -7,4 +9,8 @@ machine:
 test:
         override:
                 - docker run trabajo npm test
-
+        deployment:
+                qa:
+                        branch: /feature_.*
+                        commands:
+                                -sh deployments/qa.sh
